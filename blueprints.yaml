@@ -1,0 +1,47 @@
+name: UniRate
+slug: unirate
+type: plugin
+version: 0.1.0
+description: Live currency exchange rates, conversion, and VAT rates in your Grav templates via the UniRate API.
+icon: dollar-sign
+author:
+  name: UniRate-API
+  email: 199503049+rob-browncc@users.noreply.github.com
+  url: https://unirateapi.com
+homepage: https://github.com/UniRate-API/grav-unirate
+keywords: currency, exchange rate, forex, fx, conversion, vat, money, finance, unirate
+bugs: https://github.com/UniRate-API/grav-unirate/issues
+docs: https://github.com/UniRate-API/grav-unirate/blob/main/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.7.0' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    api_key:
+      type: text
+      label: UniRate API key
+      help: Your UniRate API key (free tier available at unirateapi.com)
+    base_url:
+      type: text
+      label: API base URL
+      default: 'https://api.unirateapi.com'
+    cache_lifetime:
+      type: number
+      label: Cache lifetime (seconds)
+      default: 3600
+      validate:
+        type: int
+        min: 0

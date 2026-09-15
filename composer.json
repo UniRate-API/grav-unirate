@@ -1,0 +1,31 @@
+{
+    "name": "unirate-api/grav-unirate",
+    "type": "grav-plugin",
+    "description": "Live currency exchange rates, conversion, and VAT rates in Grav templates via the UniRate API.",
+    "keywords": ["grav", "plugin", "currency", "exchange-rate", "forex", "vat", "unirate"],
+    "homepage": "https://github.com/UniRate-API/grav-unirate",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "UniRate-API",
+            "email": "199503049+rob-browncc@users.noreply.github.com",
+            "homepage": "https://unirateapi.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grav\\Plugin\\UniRate\\": "classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Grav\\Plugin\\UniRate\\Tests\\": "tests/"
+        }
+    }
+}
