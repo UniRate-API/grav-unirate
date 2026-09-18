@@ -1,7 +1,7 @@
 name: UniRate
 slug: unirate
 type: plugin
-version: 0.1.0
+version: 0.2.0
 description: Live currency exchange rates, conversion, and VAT rates in your Grav templates via the UniRate API.
 icon: dollar-sign
 author:
@@ -16,6 +16,12 @@ license: MIT
 
 dependencies:
   - { name: grav, version: '>=1.7.0' }
+
+# Tested against and compatible with these Grav major.minor releases.
+compatibility:
+  grav:
+    - '1.7'
+    - '2.0'
 
 form:
   validation: strict
